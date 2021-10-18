@@ -37,7 +37,7 @@ printName("Gary")
 
 // CODE HERE
 function greeting(name) {
-  String(name)
+  name = String(name)
   console.log(`Hello, ${name}`)
 }
 greeting("Jake")
@@ -51,7 +51,15 @@ greeting("Jake")
 */
 
 //CODE HERE
+function add(num1, num2) {
+  num1 = parseInt(num1)
+  num2 = parseInt(num2)
+  console.log(num1+num2)
 
+  return(num1 + num2)
+}
+let sum = add('1st', '2nd')
+// console.log(sum)
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -63,6 +71,19 @@ greeting("Jake")
 */
 
 //CODE HERE
+function nameCheck(name) {
+  name = String(name)
+  if (name === "Steven") {
+  return "What is up Steven?"
+  } else if (name === "Bryan") {
+  return "Hey Bryan"
+  } else {
+  return `Cool name, ${name}`
+  }
+}
+
+nameGreeting = nameCheck("Rod")
+// console.log(nameGreeting)
 
 
 ////////////////// PROBLEM 6 ////////////////////
