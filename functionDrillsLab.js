@@ -82,7 +82,7 @@ function nameCheck(name) {
   }
 }
 
-nameGreeting = nameCheck("Rod")
+let nameGreeting = nameCheck("Rod")
 // console.log(nameGreeting)
 
 
@@ -97,7 +97,20 @@ nameGreeting = nameCheck("Rod")
 */
 
 //CODE HERE
-
+function faveColorFinder(color) {
+  color = String(color)
+  if (color === "red") {
+  return "red is a great color"
+  } else if (color === "green") {
+  return "green is a solid favorite color"
+  } else if (color === "black") {
+  return "so trendy"
+  } else {
+  return "you need to evaluate your favorite color choice"
+  }
+}
+let colorRating = faveColorFinder("orange")
+console.log(colorRating)
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -108,6 +121,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(arr) {
+  for(let i = 0; i < arr.length; i++) {
+  console.log(arr[i])
+  }
+}
+
+printAllNames(namesArr)
 
 
 ////////////////// PROBLEM 8 ////////////////////
@@ -119,7 +139,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function thatsOdd(num) {
+  if (num % 2 === 0) {
+  return "That's not odd!"
+  } else if (num % 2 !== 0) {
+  return "That is odd indeed!"    
+  }
+}
+oddChecker = thatsOdd(6)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -133,6 +161,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr) {
+  let answers = []
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 100) {
+    answers.push("big")
+    } else {
+    answers.push("small")
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -144,8 +185,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
-
+function theEliminator(contestants, loser) {
+  for(let i = 0; i < contestants.length; i++) {
+    if (loser === contestants[i]){
+      contestants.splice(i, 1)
+    }
+  }
+  return contestants
+}
+theEliminator(5, "Katniss")
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -154,7 +202,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function allCaps(String) {
+  String.toUpperCase()
+}
+allCaps(sampleString)
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
