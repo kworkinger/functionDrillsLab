@@ -193,7 +193,8 @@ function theEliminator(contestants, loser) {
   }
   return contestants
 }
-theEliminator(5, "Katniss")
+let updatedContestants = theEliminator(contestants, "Katniss")
+console.log(updatedContestants)
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -202,10 +203,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-function allCaps(String) {
-  String.toUpperCase()
+function allCaps(str) {
+  str.toUpperCase()
 }
-allCaps(sampleString)
+console.log(allCaps(sampleString))
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -217,7 +218,15 @@ allCaps(sampleString)
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
-
+function emailCheck(email) {
+  email = String(email).trim()
+  if (email.includes('@')){
+  return "email verified"
+  } else {
+  return "must provide a valid email address"
+  }
+}
+// console.log(emailCheck(2))
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
